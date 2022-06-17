@@ -1,3 +1,4 @@
+@import url('normalize.css');
 @import url('position.css');
 @import url('./colors.css');
 @import url('text.css');
@@ -120,7 +121,7 @@ main {
     .menu-bars {
         display: none;
     }
-    form{
+    form {
         box-shadow: 0px 2.4rem 1.8rem 1px rgba(0, 0, 255, .05);
         margin: 2rem 0 4rem 0;
     }
@@ -235,6 +236,10 @@ main {
     .specialty nav a.active {
         color: var(--contrast-1);
         border-bottom: 2px solid var(--contrast-1);
+    }
+    .specialty #mealtype {
+        width: 100%;
+        padding: var(--padding);
     }
     .card-sm {
         width: 25%;
@@ -466,5 +471,26 @@ main {
     }
     .review-card img {
         width: 50%;
+    }
+}
+
+@media all and (max-width: 576px) {
+    html, body {
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    /* SPECIALTY */
+    .specialty nav a {
+        display: grid;
+        place-items: center;
+        background: var(--contrast-1);
+        padding-top:1rem;
+    }
+    .specialty nav :not(a:nth-of-type(1)) {
+        display: none;
+    }
+    #mealtype {
+
     }
 }
